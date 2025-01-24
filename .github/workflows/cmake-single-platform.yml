@@ -24,7 +24,6 @@ jobs:
       uses: actions/checkout@v2
       with:
         fetch-depth: 0
-        token: ${{secret.SUBMODULE_TOKEN}}
         submodules: true
         
     - uses: actions/checkout@v4
