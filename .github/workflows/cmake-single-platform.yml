@@ -20,6 +20,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Checkout submodule
+      uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+        token: ${{secret.SUBMODULE_TOKEN}}
+        submodules: true
+        
     - uses: actions/checkout@v4
       with:
         submodules: recursive
